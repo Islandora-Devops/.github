@@ -32,7 +32,7 @@ on:
     - cron: '$MINUTE $HOUR * * *'
 jobs:
   stale:
-    uses: Islandora-Labs/.github/.github/workflows/stale.yaml@main
+    uses: Islandora-Devops/.github/.github/workflows/stale.yaml@main
     secrets: inherit"
 
   pushd "$WORKDIR/$REPO"
