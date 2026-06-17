@@ -3,6 +3,9 @@
     'config:best-practices',
     ':rebaseStalePrs',
   ],
+  lockFileMaintenance: {
+    enabled: false,
+  },
   packageRules: [
     {
       matchUpdateTypes: [
@@ -27,6 +30,15 @@
         '*',
       ],
       prConcurrentLimit: 1,
+    },
+    {
+      matchDepTypes: [
+        'action',
+      ],
+      matchPackageNames: [
+        'Islandora-Devops/.github',
+      ],
+      pinDigests: false,
     },
   ],
   labels: [
